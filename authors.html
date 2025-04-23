@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description" content="FJAL'ePEN' - Kronologjia e Letërsisë Shqiptare dhe jo vetëm...">
+    <meta property="og:title" content="FJAL'ePEN'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="og:image" content="FJAL'ePEN'.png">
+    <title>FJAL'ePEN' | Shkrimtarët</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 0 30px;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .authors-container {
+            max-width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .author-card:last-child {
+            height: 500px !important;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">
+        <img src="img/FJAL'ePEN'.png" alt="Logo"></img>
+        <h1>FJAL'<span>e</span>PEN'</h1>
+    </div>
+    <div class="menu">
+        <a href="index.html" class="nav">KREU</a>
+        <a href="index.html#about-us" class="nav">RRETH NESH</a>
+        <a href="index.html#timeline" class="nav">KRONOLOGJI</a>
+        <a href="authors.html" class="nav">SHKRIMTARËT</a>
+        <a href="index.html#genre" class="nav">GJINITË</a>
+        <a href="index.html#footer" class="nav">KONTAKT</a>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+</div>
+
+<h2 style="margin-top: 100px;">Shkrimtarët</h2>
+
+<div class="search-container">
+    <i class="fa fa-search"></i>
+    <input class="search-bar" type="text" id="search" placeholder="Kërko shkrimtar..." onkeyup="searchAuthor()">
+</div>
+
+<div class="filter-container">
+    <select id="periodFilter">
+        <option value="">Të gjitha periudhat letrare</option>
+        <option value="1">Letërsia e vjetër</option>
+        <option value="2">Letërsia e Rilindjes Kombëtare</option>
+        <option value="3">Letërsia e Pavarsisë</option>
+        <option value="4">Letërsia e Realizmit Socialist</option>
+        <option value="5">Letërsia bashkëkohore</option>
+    </select>
+</div>
+
+<div class="authors-container">
+    <div class="author-card fade" style="background-image: url('img/ismail_kadare.jpg');" data-period="4 5">
+        <div class='overlay'>
+            <h3><span>Ismail Kadare</span></h3>
+            <p class='author-dates'>28/01/1936 - 01/07/2024</p>
+            <p class='author-description'>Ismail Kadare ishte akademik, politikan, deputet i Kuvendit Popullor, zv/kryetar i Frontit Demokratik dhe një ndër shkrimtarët më të mëdhenj bashkëkohorë. </p>
+            <a href="https://sq.wikipedia.org/wiki/Ismail_Kadare" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/dritero_agolli.jpg');" data-period="4">
+        <div class='overlay'>
+            <h3><span>Dritëro Agolli</span></h3>
+            <p class='author-dates'>13/10/1931 - 03/02/2017</p>
+            <p class='author-description'>Dritëro Agolli ishte poet, prozator, publicist dhe politikan shqiptar. Që nga viti 1973, ai ishte kryetar i Lidhjes së Shkrimtarëve dhe të Artistëve të Shqipërisë.</p>
+            <a href="https://sq.wikipedia.org/wiki/Drit%C3%ABro_Agolli" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/gjergj_fishta.webp');" data-period="2 3">
+        <div class='overlay'>
+            <h3><span>Gjergj Fishta</span></h3>
+            <p class='author-dates'>23/10/1871 - 30/12/1940</p>
+            <p class='author-description'>Gjergj Fishta ishte një prift françeskan, poet, publicist, përkthyes, politikan dhe orator i shquar shqiptar. Ai konsiderohet një nga figurat më të rëndësishme të Rilindjes Kombëtare dhe letërsisë shqiptare.
+            </p>
+            <a href="https://sq.wikipedia.org/wiki/Gjergj_Fishta" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/naim-frasheri.jpg');" data-period="2">
+        <div class='overlay'>
+            <h3><span>Naim Frashëri</span></h3>
+            <p class='author-dates'>25/05/1846 - 20/10/1900</p>
+            <p class='author-description'>Naim Frashëri ka qenë intelektual i P. Osmane, poeti më i madh i Rilindjes Kombëtare, përkthyesi i parë i Kur'anit në gjuhë shqipe, hartues tekstesh dhe veprimtar i shquar i arsimit kombëtar shqiptar.</p>
+            <a href="https://sq.wikipedia.org/wiki/Naim_Frash%C3%ABri" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/pjeter_budi.jpg');" data-period="1">
+        <div class='overlay'>
+            <h3><span>Pjetër Budi</span></h3>
+            <p class='author-dates'>1566 - dhjetor 1622</p>
+            <p class='author-description'>Pjetër Budi ka qenë një prelat i Kishës Katolike dhe shkrimtar shqiptar i cili i përket letërsisë së vjetër shqipe.Budi është autori i parë që botoi një sasi të rëndësishme poezie në gjuhën shqipe, dhe në vitin 1618 botoi rreth 3000 vargje shqip, në gegërisht.</p>
+            <a href="https://sq.wikipedia.org/wiki/Pjet%C3%ABr_Budi" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/lasgush_poradeci.jpg');" data-period="3">
+        <div class='overlay'>
+            <h3><span>Lasgush Poradeci</span></h3>
+            <p class='author-dates'>27/12/1899 – 12/11/1987</p>
+            <p class='author-description'>Llazar Gusho i njohur me pseudonimin Lasgush Poradeci ka qenë poet, arsimtar dhe kritik shqiptar. Në Austri u njoh me letërsinë moderne dhe mori një kulturë të gjerë evropiane.</p>
+            <a href="https://sq.wikipedia.org/wiki/Lasgush_Poradeci" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/maks_velo.webp');" data-period="5">
+        <div class='overlay'>
+            <h3><span>Maks Velo</span></h3>
+            <p class='author-dates'>31/08/1935 - 07/05/2020</p>
+            <p class='author-description'>Maks Velo është piktor, arkitekt, studiues dhe shkrimtar i njohur. Ai ka vuajtur denimin në burgje gjatë regjimit komunist dhe një pjesë e krijimtarisë së tij i është dedikuar dimensionit të lirisë në diktaturë. </p>
+            <a href="https://sq.wikipedia.org/wiki/Maks_Velo" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/sami_frasheri.png');" data-period="2">
+        <div class='overlay'>
+            <h3><span>Sami Frashëri</span></h3>
+            <p class='author-dates'>01/061850 - 18/06/1904</p>
+            <p class='author-description'>Sami Frashëri ka qenë nëpunës dhe intelektual shqiptar i Perandorisë Osmane, gjuhëtar, leksikograf, enciklopedist, romancier, dramaturg, përkthyes dhe ideologu themelor i Rilindjes Kombëtare, së bashku me dy vëllezërit e tij Abdylin dhe Naimin.</p>
+            <a href="https://sq.wikipedia.org/wiki/Sami_Frash%C3%ABri" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/fatos_kongoli.jpg');" data-period="5">
+        <div class='overlay'>
+            <h3><span>Fatos Kongoli</span></h3>
+            <p class='author-dates'>12 janar 1944</p>
+            <p class='author-description'>Fatos Kongoli është shkrimtar dhe matematikan shqiptar. Është autor i një vargu librash. Kongoli ka studiuar për matematikë, pjesërisht në Pekin, pjesërisht në Tiranë, ku është diplomuar në vitin 1967.</p>
+            <a href="https://sq.wikipedia.org/wiki/Fatos_Kongoli" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/mitrush_kuteli.jpg');" data-period="3">
+        <div class='overlay'>
+            <h3><span>Mitrush Kuteli</span></h3>
+            <p class='author-dates'>13/09/1907 - 04/05/1967</p>
+            <p class='author-description'>Mitrush Kuteli në letërsinë shqipe është i njohur si përkthyes, kritik letrar dhe cilësohet themelues i prozës moderne shqipe...</p>
+            <a href="https://sq.wikipedia.org/wiki/Mitrush_Kuteli" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/andon_zako_cajupi.jpg');" data-period="2">
+        <div class='overlay'>
+            <h3><span>Andon Zako Çajupi</span></h3>
+            <p class='author-dates'>27/03/1866 - 11/07/1930</p>
+            <p class='author-description'>Andon Zako, i njohur me emrin e tij letrar Çajupi, ka qenë poet, dramaturg dhe veprimtar i Rilindjes Kombëtare...</p>
+            <a href="https://sq.wikipedia.org/wiki/Andon_Zako_%C3%87ajupi" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/pjeter_bogdani.jpg');" data-period="1">
+        <div class='overlay'>
+            <h3><span>Pjetër Bogdani</span></h3>
+            <p class='author-dates'>1625 - 1689</p>
+            <p class='author-description'>Pjeter Bogdani është autori i parë origjinal i letërsisë shqiptare, autor i Çetës së Profetëve, e para vepër në prozë e shkruar në gjuhën shqipe.</p>
+            <a href="https://sq.wikipedia.org/wiki/Pjet%C3%ABr_Bogdani" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/jakov_xoxa.jpg');" data-period="4">
+        <div class='overlay'>
+            <h3><span>Jakov Xoxa</span></h3>
+            <p class='author-dates'>15/04/1923 - 28/05/1979</p>
+            <p class='author-description'>Jakov Xoxa ka qenë partizan i Frontit Nacional-Çlirimtar gjatë Luftës së Dytë Botërore në Shqipëri, pas lufte qe gazetar dhe shkrimtar. Vepra e tij më e famshme është romani Lumi i vdekur</p>
+            <a href="https://sq.wikipedia.org/wiki/Jakov_Xoxa" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/jeronim_de_rada.jpg');" data-period="2">
+        <div class='overlay'>
+            <h3><span>Jeronim de Rada</span></h3>
+            <p class='author-dates'>29/11/1814 - 28/02/1903</p>
+            <p class='author-description'>Jeronim de Rada ishte mësues, botues, folklorist, filolog, poet dhe shkrimtar italo-arbëresh, ashtu si dhe themeluesi i Rilindjes Kombëtare Shqiptare.</p>
+            <a href="https://sq.wikipedia.org/wiki/Jeronim_de_Rada" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/ben-blushi.jpg');" data-period="5">
+        <div class='overlay'>
+            <h3><span>Ben Blushi</span></h3>
+            <p class='author-dates'>1 janar 1969</p>
+            <p class='author-description'>Ben Blushi është politikan, gazetar dhe shkrimtar  shqiptar. Ai është deputet i pavarur në Kuvendin e Shqipërisë...</p>
+            <a href="https://sq.wikipedia.org/wiki/Ben_Blushi" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/bashkim_shehu.jpg');" data-period="5">
+        <div class='overlay'>
+            <h3><span>Bashkim Shehu</span></h3>
+            <p class='author-dates'>1955 Tiranë</p>
+            <p class='author-description'>Bashkim Shehu në Tiranë, është një nga shkrimtarët shqiptarë më produktivë të ditëve tona. Deri më 1981 punoi si skenarist në Kinostudion Shqipëria e re. </p>
+            <a href="https://sq.wikipedia.org/wiki/Bashkim_Shehu" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/naum_veqilharxhi.jpg');" data-period="2">
+        <div class='overlay'>
+            <h3><span>Naum Veqilharxhi</span></h3>
+            <p class='author-dates'>1797 - 1846</p>
+            <p class='author-description'>Naum Veqilharxhi ka qenë një avokat dhe studiues shqiptar. Në vitin 1844, krijoi një alfabet krejt origjinal për gjuhën shqipe, i quajtur Alfabeti i Vithkuqit.</p>
+            <a href="https://sq.wikipedia.org/wiki/Naum_Veqilharxhi" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/faik_konica.jpg');" data-period="3">
+        <div class='overlay'>
+            <h3><span>Faik Konica</span></h3>
+            <p class='author-dates'>15/03/1875 - 15/12/1942</p>
+            <p class='author-description'>Faik Konica ka qenë figurë qëndrore e lëvizjes kombëtare, studiues i historisë dhe gjuhës shqipe, botues, publicist, gazetar ,drejtues i Vatrës dhe diplomat shqiptar. </p>
+            <a href="https://sq.wikipedia.org/wiki/Faik_Konica" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/sterjo_spasse.jpg');" data-period="4">
+        <div class='overlay'>
+            <h3><span>Sterjo Spasse</span></h3>
+            <p class='author-dates'>16 shtator 1914 - 1989</p>
+            <p class='author-description'>Sterjo Spasse ka qenë arsimtar dhe shkrimtar shqiptar. Shkroi punime pedagogjike, tekste shkollore u muar me përkthime, shkroi artikuj të ndryshëm, monografi, tregime, romane etj.</p>
+            <a href="https://sq.wikipedia.org/wiki/Sterjo_Spasse" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/frank-bardhi.jpg');" data-period="1">
+        <div class='overlay'>
+            <h3><span>Frang Bardhi</span></h3>
+            <p class='author-dates'>1606 - 1643</p>
+            <p class='author-description'>Frang Bardhi ka qenë ipeshkv, shkrimtar, leksikograf, folklorist dhe etnograf shqiptar. Duke ndjekur vazhdën e paraardhësve në veprimtarinë atdhetare, në fushën e krijimtarisë letrare i kalon caqet e përkthimeve fetare.</p>
+            <a href="https://sq.wikipedia.org/wiki/Frang_Bardhi" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/fatmir_gjata.jpg');" data-period="4">
+        <div class='overlay'>
+            <h3><span>Fatmir Gjata</span></h3>
+            <p class='author-dates'>22 shtator 1922 - 1989</p>
+            <p class='author-description'>Fatmir Gjata ka qenë shkrimtar shqiptar. I rritur dhe i edukuar në mjedisin patriotik të familjes, u lidh që në moshë të re me luftën Antifashiste Nacionalçlirimtare.</p>
+            <a href="https://sq.wikipedia.org/wiki/Fatmir_Gjata" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/andrea_bogdani.jpg');" data-period="1">
+        <div class='overlay'>
+            <h3><span>Andrea Bogdani</span></h3>
+            <p class='author-dates'>1600 - 1683</p>
+            <p class='author-description'>Andrea Bogdani gjithashtu i njohur si Ndre Bogdani ka qene nje intelektual shqiptar, gramatikan dhe prelat i Kishës Romake Katolike.</p>
+            <a href="https://sq.wikipedia.org/wiki/Andrea_Bogdani" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+</div>
+
+<script src="functions.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filter = document.getElementById("periodFilter");
+        const cards = document.querySelectorAll(".author-card");
+
+        filter.addEventListener("change", function () {
+            const selectedPeriod = filter.value;
+
+            cards.forEach(card => {
+                const cardPeriods = card.getAttribute("data-period").split(" ");
+
+                if (selectedPeriod === "" || cardPeriods.includes(selectedPeriod)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
+<script>
+    document.querySelector(".menu").addEventListener("click", toggleMenu);
+    document.querySelectorAll('.fade').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+</body>
+</html>

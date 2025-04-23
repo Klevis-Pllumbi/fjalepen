@@ -3,47 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:description" content="FJAL'ePEN' - Kronologjia e Letërsisë Shqiptare dhe jo vetëm...">    <!-- -->
-    <meta property="og:title" content="FJAL'ePEN'">                                                 <!-- -->
+    <meta property="og:description" content="FJAL'ePEN' - Kronologjia e Letërsisë Shqiptare dhe jo vetëm...">
+    <meta property="og:title" content="FJAL'ePEN'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
-    <meta property="og:image" content="assets/img/metropol_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    <meta property="og:image" content="FJAL'ePEN'.png">
     <title>FJAL'ePEN'</title>
-    <link rel="icon" type="image/x-icon" href="FJAL'ePEN'.png">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="navbar">
     <div class="logo">
-        <img src="FJAL'ePEN'.png" alt="Logo"></img>
+        <img src="img/FJAL'ePEN'.png" alt="Logo"></img>
         <h1>FJAL'<span>e</span>PEN'</h1>
     </div>
     <div class="menu">
-        <a href="#" class="nav">KREU</a>
-        <a href="#" class="nav">KRONOLOGJI</a>
-        <a href="#" class="nav">SHKRIMTARËT</a>
-        <a href="#" class="nav">GJINITË</a>
-        <a href="#" class="nav">KONTAKT</a>
+        <a href="index.html" class="nav">KREU</a>
+        <a href="index.html#about-us" class="nav">RRETH NESH</a>
+        <a href="index.html#timeline" class="nav">KRONOLOGJI</a>
+        <a href="authors.html" class="nav">SHKRIMTARËT</a>
+        <a href="index.html#genre" class="nav">GJINITË</a>
+        <a href="#footer" class="nav">KONTAKT</a>
     </div>
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 </div>
 
 <div class="video-container">
-    <div id="player"></div>
-
-    <div class="controls">
-        <div class="control-button" id="prevBtn">&#10094;</div>
-        <div class="control-button" id="nextBtn">&#10095;</div>
+    <video autoplay muted loop>
+        <source src="background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+        <div class="poetry">
+            <p id="typewriter"></p>
+        </div>
     </div>
 </div>
 
-<script src="assets/js/functions.js"></script>
+<div class="info fade" id="about-us">
+    <div class="info-text">
+        <h2>Rreth nesh</h2>
+        <p>
+            FJAL'ePEN' u realizua nga nxënësit e klasës IX-B, nën drejtimin e mësueses së gjuhë-letërsisë Elida Pllumbi, në kuadër të përmbylljes së projektit vjetor 2024-2025 "Letërsia shqipe" dhe kualifikimit të mësueses. <br>
+            Ky website informues është ndërtuar për të paraqitur një pasqyrë të plotë të letërsisë shqiptare, duke përfshirë periudhat kryesore letrare dhe karakteristikat e tyre dalluese. Secila periudhë do të shoqërohet me përshkrim, autorët më të rëndësishëm, veprat përfaqësuese dhe ndikimin në zhvillimin e kulturës kombëtare. Nëpërmjet një ndërfaqeje të thjeshtë dhe intuitive, përdoruesit do të kenë mundësi të eksplorojnë historinë e letërsisë shqiptare në mënyrë kronologjike apo tematike.
+        </p>
+        <h4>Qëllimi</h4>
+        <p>
+            Qëllimi i këtij website-i është të rrisë ndërgjegjësimin dhe njohuritë mbi trashëgiminë letrare shqiptare, veçanërisht te të rinjtë, studentët dhe të gjithë të interesuarit në kulturën dhe gjuhën shqipe. Ai synon të shërbejë si një burim i besueshëm dhe edukativ për hulumtime, mësimdhënie dhe zhvillim personal. Ky është hapi i parë dhe synojmë që kjo platformë të kthehet në bankën më të madhe të informacionit për letërsinë e pasur dhe të bukur shqipe.
+        </p>
+    </div>
+    <img src="img/shkolla.png" alt="Shkolla 'Tahir Hoxha'" class="fade">
+</div>
+
+<h2 style="margin-bottom: -20px;">Kronologji</h2>
+<div class="timeline" id="timeline">
+    <div class="container left fade">
+        <div class="date">Shek. <br></br>XV-XVIII</div>
+        <i class="icon fa fa-home"></i>
+        <div class="content" onclick="redirectTo('Letersia_e_vjeter.html')">
+            <h2>Letërsia e vjetër shqipe</h2>
+            <p>
+                Periudha e parë e shkrimeve në shqip, me vepra fetare dhe gjuhë të thjeshtë...
+            </p>
+        </div>
+    </div>
+    <div class="container right fade">
+        <div class="date">1836-1912</div>
+        <i class="icon fa fa-gift"></i>
+        <div class="content" onclick="redirectTo('Letersia_e_Rilindjes_Kombetare.html')">
+            <h2>Letërsia e Rilindjes Kombëtare</h2>
+            <p>
+                Letërsi që nxiti ndërgjegjen kombëtare dhe luftën për liri...
+            </p>
+        </div>
+    </div>
+    <div class="container left fade">
+        <div class="date">1912-1939</div>
+        <i class="icon fa fa-user"></i>
+        <div class="content" onclick="redirectTo('Letersia_e_Pavaresise.html')">
+            <h2>Letërsia e Pavarsisë (realizmi europian)</h2>
+            <p>
+                Zhvillim i zhanreve dhe thellim i tematikës kombëtare...
+            </p>
+        </div>
+    </div>
+    <div class="container right fade">
+        <div class="date">1945-1990</div>
+        <i class="icon fa fa-running"></i>
+        <div class="content" onclick="redirectTo('Letersia_e_Realizmit_Socialist.html')">
+            <h2>Letërsia e Realizmit Socialist</h2>
+            <p>
+                Letërsi e udhëhequr nga ideologjia, me fokus tek heroi punëtor e partia...
+            </p>
+        </div>
+    </div>
+    <div class="container left fade">
+        <div class="date">1990-sot</div>
+        <i class="icon fa fa-cog"></i>
+        <div class="content" onclick="redirectTo('Letersia_Bashkekohore.html')">
+            <h2>Letërsia Post-Komuniste (bashkëkohore)</h2>
+            <p>
+                Shkrimtarë të lirë që trajtojnë tema të reja me forma të ndryshme artistike...
+            </p>
+        </div>
+    </div>
+</div>
+
+<h2 style="margin-bottom: -20px;">Shkrimtarët</h2>
+<div class="authors-container">
+    <div class="author-card fade" style="background-image: url('img/ismail_kadare.jpg');" data-period="4 5">
+        <div class='overlay'>
+            <h3><span>Ismail Kadare</span></h3>
+            <p class='author-dates'>28/01/1936 - 01/07/2024</p>
+            <p class='author-description'>Ismail Kadare ishte akademik, politikan, deputet i Kuvendit Popullor, zv/kryetar i Frontit Demokratik dhe një ndër shkrimtarët më të mëdhenj bashkëkohorë. </p>
+            <a href="https://sq.wikipedia.org/wiki/Ismail_Kadare" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/dritero_agolli.jpg');" data-period="4">
+        <div class='overlay'>
+            <h3><span>Dritëro Agolli</span></h3>
+            <p class='author-dates'>13/10/1931 - 03/02/2017</p>
+            <p class='author-description'>Dritëro Agolli ishte poet, prozator, publicist dhe politikan shqiptar. Që nga viti 1973, ai ishte kryetar i Lidhjes së Shkrimtarëve dhe të Artistëve të Shqipërisë.</p>
+            <a href="https://sq.wikipedia.org/wiki/Drit%C3%ABro_Agolli" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/gjergj_fishta.webp');" data-period="2 3">
+        <div class='overlay'>
+            <h3><span>Gjergj Fishta</span></h3>
+            <p class='author-dates'>23/10/1871 - 30/12/1940</p>
+            <p class='author-description'>Gjergj Fishta ishte një prift françeskan, poet, publicist, përkthyes, politikan dhe orator i shquar shqiptar. Ai konsiderohet një nga figurat më të rëndësishme të Rilindjes Kombëtare dhe letërsisë shqiptare.
+            </p>
+            <a href="https://sq.wikipedia.org/wiki/Gjergj_Fishta" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/naim-frasheri.jpg');" data-period="2">
+        <div class='overlay'>
+            <h3><span>Naim Frashëri</span></h3>
+            <p class='author-dates'>25/05/1846 - 20/10/1900</p>
+            <p class='author-description'>Naim Frashëri ka qenë intelektual i P. Osmane, poeti më i madh i Rilindjes Kombëtare, përkthyesi i parë i Kur'anit në gjuhë shqipe, hartues tekstesh dhe veprimtar i shquar i arsimit kombëtar shqiptar.</p>
+            <a href="https://sq.wikipedia.org/wiki/Naim_Frash%C3%ABri" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <div class="author-card fade" style="background-image: url('img/pjeter_budi.jpg');" data-period="1">
+        <div class='overlay'>
+            <h3><span>Pjetër Budi</span></h3>
+            <p class='author-dates'>1566 - dhjetor 1622</p>
+            <p class='author-description'>Pjetër Budi ka qenë një prelat i Kishës Katolike dhe shkrimtar shqiptar i cili i përket letërsisë së vjetër shqipe.Budi është autori i parë që botoi një sasi të rëndësishme poezie në gjuhën shqipe, dhe në vitin 1618 botoi rreth 3000 vargje shqip, në gegërisht.</p>
+            <a href="https://sq.wikipedia.org/wiki/Pjet%C3%ABr_Budi" target="_blank"><button>Më shumë info</button></a>
+        </div>
+    </div>
+    <a href="authors.html" class="author-card fade" style="box-shadow: none; font-size: 25px; justify-content: center;">Më shumë shkrimtarë... -></a>
+</div>
+
+<h2 id="genre" style="margin-bottom: -20px;">Gjinitë letrare sipas llojit të tekstit</h2>
+<div class="diagram">
+    <ol class="level-1-wrapper">
+        <li>
+            <h3 class="level-1 rectangle fade">Teksti rrëfimtar</h3>
+            <ol class="level-2-wrapper">
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Miti" target="_blank">Miti</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Përralla" target="_blank">Përralla</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Fabula" target="_blank">Fabula</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Legjenda" target="_blank">Legjenda</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Anekdota" target="_blank">Anekdota</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Tregimi" target="_blank">Tregimi</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Novela" target="_blank">Novela</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Romani" target="_blank">Romani</a></h4>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="level-1 rectangle fade">Teksti poetik</h3>
+            <ol class="level-2-wrapper">
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Poezia_lirike" target="_blank">Poezia lirike</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Poezia_epike" target="_blank">Poezia epike</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Poema" target="_blank">Poema</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Balada" target="_blank">Balada</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Soneti" target="_blank">Soneti</a></h4>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="level-1 rectangle fade">Teksti dramatik</h3>
+            <ol class="level-2-wrapper">
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Drama" target="_blank">Drama</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Tragjedia" target="_blank">Tragjedia</a></h4>
+                </li>
+                <li>
+                    <h4 class="level-2 rectangle fade"><a href="https://sq.wikipedia.org/wiki/Komedia" target="_blank">Komedia</a></h4>
+                </li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+<footer class="footer" id="footer">
+    <div class="footer-container">
+        <div class="institution fade">
+            <img src="img/shkolla-logo.jpg" alt="Shkolla 'Tahir Hoxha'" class="footer-img">
+            <div class="institution-info">
+                <p><strong>Email:</strong> <a href="mailto:shtahirhoxha@gmail.com">shtahirhoxha@gmail.com</a></p>
+                <p><strong>Facebook:</strong> <a href="https://facebook.com/shkollaklos" target="_blank">Shkolla "Tahir Hoxha"</a></p>
+            </div>
+        </div>
+
+        <div class="institution fade">
+            <div class="institution-info">
+                <h3>Mësuesja Elida Pllumbi<br>
+                    &<br>
+                    Klasa IX-B 2024-2025</h3>
+                <p><strong>Email:</strong> <a href="mailto:pllumbielida@gmail.com">pllumbielida@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="institution fade">
+            <img src="img/zva-logo.jpg" alt="ZVAP Klos" class="footer-img">
+            <div class="institution-info">
+                <p><strong>Email:</strong> <a href="mailto:zvarsimoreklos@gmail.com">zvarsimoreklos@gmail.com</a></p>
+                <p><strong>Facebook:</strong> <a href="https://facebook.com/ZVAPKLOS" target="_blank">ZVAP Klos</a></p>
+            </div>
+        </div>
+    </div>
+    <p class="footer-bottom">© 2025 FJAL'ePEN' për Letërsinë Shqiptare</p>
+</footer>
+
+<script src="functions.js"></script>
+<script>
+    const text = `Gjuha jonë sa e mirë! \nSa e ëmbël, sa e gjerë! \nSa e lehtë, sa e lirë! \nSa e bukur, sa e vlerë!`;
+    const typewriter = document.getElementById("typewriter");
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            if (text[index] === '\n') {
+                typewriter.innerHTML += '<br>';
+            } else {
+                typewriter.innerHTML += text[index];
+            }
+            index++;
+            setTimeout(type, 60);
+        }
+    }
+
+    type();
+</script>
+<script>
+    document.querySelector(".menu").addEventListener("click", toggleMenu);
+    document.querySelectorAll('.fade').forEach(el => {
+        observer.observe(el);
+    });
+</script>
 </body>
 </html>
